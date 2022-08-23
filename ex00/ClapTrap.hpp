@@ -8,6 +8,7 @@ class ClapTrap
 {
 public:
 	ClapTrap();
+	ClapTrap(std::string name);
 	~ClapTrap();
 
 	void attack(const std::string& target);
@@ -15,9 +16,10 @@ public:
 	void beRepaired(unsigned int amount);
 
 private:
-	int _hitPoints;
-	int _energyPoints;
-	int _attackDamage;
+	std::string _name;
+	unsigned int _hitPoints;
+	unsigned int _energyPoints;
+	unsigned int _attackDamage;
 };
 
 #endif //CLAPTRAP_HPP
